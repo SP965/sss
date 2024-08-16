@@ -25,7 +25,7 @@
             justify-content: space-between;
             align-items: center;
             background: linear-gradient(180deg, #101010, #090909);
-            padding: 5px 20px;
+            padding: 10px 20px;
             position: fixed;
             width: 100%;
             top: 0;
@@ -63,17 +63,17 @@
         }
         .content {
             text-align: center;
-            margin-top: 100px;
+            margin-top: 80px; /* Adjusted for navbar height */
             padding: 20px;
         }
         .content h1 {
             color: #FF4BC2;
             font-weight: 800;
-            font-size: 48px;
+            font-size: 32px; /* Adjusted for responsiveness */
             margin: 0;
         }
         .content p {
-            font-size: 24px;
+            font-size: 20px; /* Adjusted for responsiveness */
             margin: 10px 0 0 0;
             opacity: 0.7;
             color: #ffffff;
@@ -121,12 +121,12 @@
             justify-content: center;
         }
         .position-item .description h2 {
-            font-size: 24px;
+            font-size: 20px; /* Adjusted for responsiveness */
             margin: 0;
             color: #FF4BC2;
         }
         .position-item .description p {
-            font-size: 16px;
+            font-size: 14px; /* Adjusted for responsiveness */
             color: #ffffff;
             opacity: 0.8;
             margin: 5px 0 0 0;
@@ -136,8 +136,9 @@
             margin-top: 20px;
         }
         .ad-container a img {
-            width: 840px;
-            height: 150px;
+            width: 100%;
+            max-width: 840px;
+            height: auto;
             object-fit: cover;
         }
         @media (max-width: 768px) {
@@ -147,7 +148,7 @@
                 position: absolute;
                 background-color: #333;
                 width: 100%;
-                top: 50px;
+                top: 60px;
                 left: 0;
                 padding: 10px 0;
                 text-align: center;
@@ -162,26 +163,29 @@
             .menu-icon {
                 display: block;
             }
-            .position-item img,
-            .ad-container a img {
+            .position-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .position-item img {
                 width: 100%;
                 height: auto;
+                margin-bottom: 10px;
             }
         }
         footer {
             background-color: #090909;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             color: #ffffff;
             font-size: 14px;
         }
-        .footer-left {
-            text-align: left;
-        }
+        .footer-left,
         .footer-right {
-            text-align: right;
+            text-align: center;
         }
         .footer-right a {
             color: #FF4BC2;
