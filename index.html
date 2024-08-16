@@ -24,7 +24,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(90deg, #1e1e1e, #3a3a3a); /* Dark gradient for navbar */
+            background: linear-gradient(180deg, #101010, #090909); /* Dark gradient from top to bottom for navbar */
             padding: 5px 20px; /* Reduced padding for smaller height */
             position: fixed;
             width: 100%;
@@ -90,7 +90,7 @@
             margin-bottom: 30px;
             width: 100%;
             max-width: 800px;
-            background-color: #1e1e1e;
+            background-color: #1e1e1e; /* Dark background for position items */
             padding: 20px;
             border-radius: 10px;
             position: relative;
@@ -127,13 +127,18 @@
         }
         .position-item .description p {
             font-size: 16px;
-            color: #ffffff;
+            color: #ffffff; /* White text color for description */
             opacity: 0.8;
             margin: 5px 0 0 0;
         }
         .ad-container {
             text-align: center;
             margin-top: 20px;
+        }
+        .ad-container a img {
+            width: 770px; /* Set width of the ad image */
+            height: 100px; /* Set height of the ad image */
+            object-fit: cover;
         }
         @media (max-width: 768px) {
             .navbar .nav-links {
@@ -157,7 +162,8 @@
             .menu-icon {
                 display: block;
             }
-            .position-item img {
+            .position-item img,
+            .ad-container a img {
                 width: 100%;
                 height: auto;
             }
@@ -178,7 +184,9 @@
         <p>All Positions</p>
     </div>
     <div class="ad-container">
-        <img src="https://i.postimg.cc/TP7SwS10/Promos-14.png">
+        <a href="https://rblxmagic.com" target="_blank">
+            <img src="https://i.postimg.cc/cHfQjgp3/Promos-16.png" alt="Advertisement">
+        </a>
     </div>
     <div class="position-list">
         <div class="position-item">
