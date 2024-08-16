@@ -25,7 +25,7 @@
             justify-content: space-between;
             align-items: center;
             background: linear-gradient(180deg, #101010, #090909);
-            padding: 10px 20px;
+            padding: 5px 20px;
             position: fixed;
             width: 100%;
             top: 0;
@@ -40,10 +40,11 @@
             display: flex;
             margin: 0;
             padding: 0;
+            justify-content: flex-start;
+            padding-right: 40px;
         }
         .navbar .nav-links li {
             font-size: 17px;
-            margin-left: 20px;
         }
         .navbar .nav-links a {
             color: #ffffff;
@@ -68,11 +69,11 @@
         .content h1 {
             color: #FF4BC2;
             font-weight: 800;
-            font-size: 36px;
+            font-size: 48px;
             margin: 0;
         }
         .content p {
-            font-size: 20px;
+            font-size: 24px;
             margin: 10px 0 0 0;
             opacity: 0.7;
             color: #ffffff;
@@ -135,9 +136,8 @@
             margin-top: 20px;
         }
         .ad-container a img {
-            width: 100%;
-            max-width: 840px;
-            height: auto;
+            width: 840px;
+            height: 150px;
             object-fit: cover;
         }
         @media (max-width: 768px) {
@@ -147,7 +147,7 @@
                 position: absolute;
                 background-color: #333;
                 width: 100%;
-                top: 60px;
+                top: 50px;
                 left: 0;
                 padding: 10px 0;
                 text-align: center;
@@ -162,34 +162,26 @@
             .menu-icon {
                 display: block;
             }
-            .position-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .position-item img {
-                margin-bottom: 20px;
+            .position-item img,
+            .ad-container a img {
                 width: 100%;
                 height: auto;
-            }
-            .position-item .rank {
-                top: 10px;
-                right: 10px;
-                left: unset;
             }
         }
         footer {
             background-color: #090909;
             padding: 20px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             color: #ffffff;
             font-size: 14px;
-            text-align: center;
         }
-        .footer-left, .footer-right {
-            margin: 10px 0;
+        .footer-left {
+            text-align: left;
+        }
+        .footer-right {
+            text-align: right;
         }
         .footer-right a {
             color: #FF4BC2;
@@ -205,7 +197,7 @@
     <nav class="navbar">
         <div class="logo"><img src="https://i.postimg.cc/pLFqzjSc/xxxpositions.png" alt="Logo"></div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="">Home</a></li>
+            <li><a href="https://xxxpositions.fun">Home</a></li>
             <li><a href="contact">Contact Us</a></li>
         </ul>
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
@@ -225,7 +217,7 @@
             <img src="https://i.postimg.cc/jdGBpR09/Frame-7-4.png" alt="Position 1">
             <div class="description">
                 <h2>Missionary</h2>
-                <p>The missionary position, one of the most popular sex positions, involves one partner lying on their back while the other lies on top, facing them. It's favored for its simplicity and face-to-face intimacy.</p>
+                <p>The missionary position, one of the most popular sex positions, involves one partner lying on their back while the other lies on top, facing them. It's favored for its simplicity and face-to-face intimacy</p>
             </div>
         </div>
         <div class="position-item">
