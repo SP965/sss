@@ -21,6 +21,41 @@
             flex-direction: column;
             min-height: 100vh;
         }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(180deg, #101010, #090909);
+            padding: 5px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+            padding-right: 40px;
+        }
+        .navbar .nav-links li {
+            font-size: 17px;
+        }
+        .navbar .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .navbar .nav-links a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
         .content {
             text-align: center;
             margin-top: 100px;
@@ -31,7 +66,7 @@
             color: #FF4BC2;
             font-weight: 800;
             font-size: 48px;
-            margin: 0;
+            margin: 20px 0;
         }
         .contact-container {
             margin-top: 20px;
@@ -39,11 +74,17 @@
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .contact-container p {
             font-size: 24px;
             margin: 0;
             color: #ffffff;
+        }
+        .or-text {
+            margin: 20px 0;
+            font-size: 24px;
+            opacity: 0.7;
         }
         footer {
             background-color: #090909;
@@ -71,10 +112,21 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo"><img src="https://i.postimg.cc/pLFqzjSc/xxxpositions.png" alt="Logo"></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
     <div class="content">
         <h1>CONTACT US</h1>
         <div class="contact-container">
             <p>Add "MB#9192" on Discord</p>
+        </div>
+        <p class="or-text">OR</p>
+        <div class="contact-container">
+            <p>Add "Frasper" on Telegram</p>
         </div>
     </div>
     <footer>
