@@ -15,8 +15,8 @@
             font-weight: 600;
             margin: 0;
             padding: 0;
-            background-color: #121212; /* Dark theme background */
-            color: #ffffff; /* Text color for the dark theme */
+            background-color: #121212;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -25,15 +25,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(180deg, #101010, #090909); /* Dark gradient from top to bottom for navbar */
-            padding: 5px 20px; /* Reduced padding for smaller height */
+            background: linear-gradient(180deg, #101010, #090909);
+            padding: 10px 20px;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
         .navbar .logo img {
-            height: 50px; /* Adjusted height for a smaller navbar */
+            height: 40px;
             width: auto;
         }
         .navbar .nav-links {
@@ -45,12 +45,12 @@
             padding-right: 40px;
         }
         .navbar .nav-links li {
-            font-size: 17px;
+            font-size: 15px;
         }
         .navbar .nav-links a {
-            color: #ffffff; /* White text color for navbar links */
+            color: #ffffff;
             text-decoration: none;
-            padding: 10px;
+            padding: 8px;
         }
         .navbar .nav-links a:hover {
             background-color: #575757;
@@ -58,48 +58,47 @@
         }
         .content {
             text-align: center;
-            margin-top: 100px;
+            margin-top: 70px;
             padding: 20px;
             flex-grow: 1;
         }
         .content h1 {
             color: #FF4BC2;
             font-weight: 800;
-            font-size: 48px;
+            font-size: 36px;
             margin: 20px 0;
         }
         .contact-container {
             margin-top: 20px;
             background-color: #1e1e1e;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             display: inline-block;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for the container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .contact-container p {
-            font-size: 24px;
+            font-size: 18px;
             margin: 0;
             color: #ffffff;
         }
         .or-text {
             margin: 20px 0;
-            font-size: 24px;
+            font-size: 18px;
             opacity: 0.7;
         }
         footer {
             background-color: #090909;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             color: #ffffff;
             font-size: 14px;
         }
-        .footer-left {
-            text-align: left;
-        }
+        .footer-left,
         .footer-right {
-            text-align: right;
+            text-align: center;
+            margin: 5px 0;
         }
         .footer-right a {
             color: #FF4BC2;
@@ -108,6 +107,43 @@
         }
         .footer-right a:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                background-color: #333;
+                width: 100%;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+                text-align: center;
+            }
+            .navbar .nav-links.active {
+                display: flex;
+            }
+            .navbar .nav-links li {
+                margin: 10px 0;
+            }
+            .menu-icon {
+                display: block;
+                font-size: 24px;
+                color: white;
+                cursor: pointer;
+            }
+            .content h1 {
+                font-size: 28px;
+            }
+            .contact-container {
+                padding: 10px;
+            }
+            .contact-container p {
+                font-size: 16px;
+            }
+            .or-text {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -118,6 +154,7 @@
             <li><a href="https://xxxpositions.fun">Home</a></li>
             <li><a href="contact">Contact Us</a></li>
         </ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     </nav>
     <div class="content">
         <h1>CONTACT US</h1>
@@ -139,5 +176,11 @@
             <a href="https://rblxmagic.com" target="_blank">RBLXMagic</a>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
